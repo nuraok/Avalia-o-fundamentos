@@ -1,0 +1,25 @@
+<DOCTYPE html>
+  <html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste jogo</title>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+
+  <body class="flex justify-center items-center bg-balack font-pixel text-white font-stretch cursor-none relative">
+    
+    <main id="tela" class="flex flex-col justify-center items-center w-200 h-137.5 overflow-hidden relative bg-black scale-193">
+        <section id="background"
+        class="bg-[linear-gradient(to_right,#320840_2px,transparent_2px),linear-gradient(to_bottom,#320840_2px,transparent_2px)] w-screen h-screen transition duration-1000 z-0 blur-[2px] before:bg-[linear-gradient(to_right,#320840_2px,transparent_2px),linear-gradient(to_bottom,#320840_2px,transparent_2px)]">
+      </section>
+        <div id="player1" class="bg-red-600 w-10 h-10 absolute"></div>
+
+    </main>
+    <script type="module" src="src/components/playerMove.js"></script>
+    <script type="module" src="src/animations.js"></script>
+  </body>
+
+  </html>
+</DOCTYPE>

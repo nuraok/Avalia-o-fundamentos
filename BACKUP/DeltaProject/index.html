@@ -1,0 +1,177 @@
+<DOCTYPE html>
+  <html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste jogo</title>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+
+  <body class="flex justify-center items-center bg-balack font-pixel text-white font-stretch cursor-none">
+    <main class="flex flex-col justify-center items-center w-200 h-137.5 overflow-hidden relative bg-black scale-193">
+      <section id="background"
+        class="bg-[linear-gradient(to_right,#320840_2px,transparent_2px),linear-gradient(to_bottom,#320840_2px,transparent_2px)] w-screen h-screen transition duration-1000 z-0 blur-[2px] before:bg-[linear-gradient(to_right,#320840_2px,transparent_2px),linear-gradient(to_bottom,#320840_2px,transparent_2px)]">
+      </section>
+
+      <section class="absolute left-4 top-6 flex gap-4 scale-80">
+        <div class="flex flex-col w-8 items-center translate-y-2">
+          <img src="assets/img/TPSprite.png" alt="" class="h-fit translate-y-12 mb-16" />
+          <p class="font-pixel text-2xl h-fit w-fit">100</p>
+          <p class="font-pixel text-2xl h-fit w-fit">%</p>
+        </div>
+
+        <section class="w-10 h-72 bg-black flex justify-center items-center">
+          <div
+            class="h-70 w-8 border-2 border-black [clip-path:polygon(0_32px,_32px_0px,_32px_248px,_0px_280px)] overflow-hidden relative flex flex-col-reverse bg-blue-700">
+            <div id="tp" class="w-[calc(100%+10px)] bg-cyan-400 border-t-2 border-white absolute z-1"
+              style="height: 101%">
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="contagem" class="absolute top-0 "></section>
+      <section id="buttonIdx" class="absolute top-4 "></section>
+      <section id="contagem" class="absolute top-8 "></section>
+
+      <section id="battleBox"
+        class="bg-black border-5 border-[#00C918] w-50 aspect-square z-10 absolute overflow-hidden shadow-2xl shadow-black top-25">
+        <div id="soul" class="h-5 w-5 bg-cover bg-center absolute bg-soul"></div>
+      </section>
+
+      <section
+        class="w-202 h-24 p-1 bg-black border-b-4 border-t-[3px] border-t-[#320840] border-b-[#320840] flex flex-row items-center -translate-y-8">
+        <section class="z-20 flex flex-row justify-center items-center relative h-full w-100">
+          <div id="playerMenu1"
+            class="h-9 w-52 p-1 flex flex-row gap-1 bg-black absolute items-center z-1 transition-all duration-300">
+            <div class="h-6 aspect-square border-2 border-white"></div>
+
+            <div class="flex items-baseline w-full gap-4">
+              <p class="transform translate-y-1.5 tracking-[-3px]">PLAYER1</p>
+              <div class="w-full flex flex-col gap-0.5 -translate-y-1">
+                <p class="shrink-0 w-full text-right leading-none text-[11px]">
+                  100/100
+                </p>
+                <div class="flex flex-row items-center w-full justify-end-safe">
+                  <p
+                    class="text-[8px] w-full leading-none font-bold inline-flex items-end after:content-[''] after:w-[100%] after:h-2 after:bg-white after:ml-0.5">
+                    HP
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section id="playerButton1"
+            class="flex justify-center gap-1 absolute z-0 scale-110 translate-y-[3px] w-100 h-full">
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:0px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-31px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-62px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-93px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-124px_-32px]"></div>
+          </section>
+        </section>
+        <section class="z-20 flex flex-row justify-center items-center relative h-full w-100">
+          <div id="playerMenu2"
+            class="h-9 w-52 p-1 flex flex-row gap-1 bg-black absolute items-center z-1 transition-all duration-300">
+            <div class="h-6 aspect-square border-2 border-white"></div>
+
+            <div class="flex items-baseline w-full gap-4">
+              <p class="transform translate-y-1.5 tracking-[-3px]">PLAYER2</p>
+              <div class="w-full flex flex-col gap-0.5 -translate-y-1">
+                <p class="shrink-0 w-full text-right leading-none text-[11px]">
+                  100/100
+                </p>
+                <div class="flex flex-row items-center w-full justify-end-safe">
+                  <p
+                    class="text-[8px] w-full leading-none font-bold inline-flex items-end after:content-[''] after:w-[100%] after:h-2 after:bg-white after:ml-0.5">
+                    HP
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section id="playerButton2"
+            class="flex justify-center gap-1 absolute z-0 scale-110 translate-y-[3px] w-100 h-full">
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:0px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-155px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-62px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-93px_-32px]"></div>
+            <div class="w-[31px] h-[32px] bg-bUI [image-rendering:pixelated] bg-[position:-124px_-32px]"></div>
+          </section>
+        </section>
+      </section>
+      <section id="stuffMenu" class="h-60 w-200 capitalize text-[18px] relative">
+
+        <!-- inimigos -->
+        <div class="flex flex-row pl-10 -translate-y-4 absolute">
+          <div class="grid grid-rows-3 w-full h-full gap-y-2">
+            <div class="h-full flex flex-row items-center gap-1">
+              <div class="bg-soul bg-cover w-4 h-4"></div>
+              <p>DUMMY1</p>
+            </div>
+            <!-- originalmente sem nada, enimies.js ira descidir -->
+
+          </div>
+          <div class="w-60"></div>
+        </div>
+
+        <!-- spell/ACT -->
+        <div class="flex flex-row pl-10 -translate-y-4 absolute">
+          <div class="grid grid-rows-3 w-full h-full gap-y-2">
+            <div class="h-full flex flex-row items-center gap-1">
+              <div class="bg-soul bg-cover w-4 h-4"></div>
+              <p>DUMMY1</p>
+            </div>
+            <!-- originalmente sem nada, enimies.js ira descidir -->
+
+          </div>
+          <div class="w-60"></div>
+        </div>
+
+        <!-- items -->
+        <div class="flex flex-row px-8 -translate-y-4 absolute">
+          <div class="grid grid-cols-2 gap-y-1 w-140 h-fit">
+            <div class="h-10 flex flex-row items-center">
+              <p>item</p>
+            </div>
+            <div class="h-10 flex flex-row items-center">
+              <p>item</p>
+            </div>
+          </div>
+          <div class="w-60"></div>
+        </div>
+
+        <!-- spare -->
+        <div class="flex flex-row pl-10 -translate-y-4 absolute">
+          <div class="grid grid-rows-3 w-full h-full gap-y-2">
+            <div class="h-full flex flex-row items-center gap-1">
+              <div class="bg-soul bg-cover w-4 h-4"></div>
+              <p>POUPARDUMMY1</p>
+            </div>
+            <!-- originalmente sem nada, enimies.js ira descidir -->
+
+          </div>
+          <div class="w-60"></div>
+        </div>
+
+        <!-- spell/ACT -->
+        <div class="flex flex-row px-8 -translate-y-4 absolute">
+          <div class="grid grid-cols-2 gap-y-1 w-140 h-fit">
+            <div class="h-10 flex flex-row items-center">
+              <p>item</p>
+            </div>
+            <div class="h-10 flex flex-row items-center">
+              <p>item</p>
+            </div>
+          </div>
+          <div class="w-60"></div>
+        </div>
+
+      </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+
+  </html>
+</DOCTYPE>
